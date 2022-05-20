@@ -1,0 +1,6 @@
+<app-search (onkeyUp)="setFilter($event)" [value]="filter"></app-search>
+<app-photos [photos]="getPhotos()"></app-photos>
+<p class="text-center text-muted" *ngIf="!getPhotos().length">
+  Sorry, no photos
+</p>
+<app-load-button (click)="load()" [hasMore]="hasMore"></app-load-button>
